@@ -1,0 +1,32 @@
+<%= form_with(model: oenologist_magazine, local: true) do |form| %>
+  <% if oenologist_magazine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(oenologist_magazine.errors.count, "error") %> prohibited this oenologist_magazine from being saved:</h2>
+
+      <ul>
+        <% oenologist_magazine.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :oenologist_id %>
+    <%= form.text_field :oenologist_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :magazine_id %>
+    <%= form.text_field :magazine_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.text_field :position %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

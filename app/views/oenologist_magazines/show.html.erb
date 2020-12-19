@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Oenologist:</strong>
+  <%= @oenologist_magazine.oenologist %>
+</p>
+
+<p>
+  <strong>Magazine:</strong>
+  <%= @oenologist_magazine.magazine %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @oenologist_magazine.position %>
+</p>
+
+<%= link_to 'Edit', edit_oenologist_magazine_path(@oenologist_magazine) %> |
+<%= link_to 'Back', oenologist_magazines_path %>
